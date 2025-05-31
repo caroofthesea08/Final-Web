@@ -1,11 +1,9 @@
-export interface Order {
-  id: string
-  client: {
-    id: string
-    name: string
-    email: string
-  }
-  products: string[]
-  total_amount: number
-  payment_status: "paid" | "refunded" | "failed"
-}
+import { z } from "zod"
+
+export const OrderSchema = z.object({
+  products: z.array(z.string()).nonempty("Debes seleccionar al menos un producto"),
+  total_amount: z.number().positive("El total debe ser mayor que cero"),
+})
+
+export type OrderFormValues = z.infer<typeof OrderSchema>
+

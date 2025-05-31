@@ -14,12 +14,12 @@ export default function Home() {
           Únete al imperio de Manuela “La Líder”. Cosméticos de guerra, labios de acero, mirada letal.
         </p>
         <div className="flex gap-4">
-          <Link href="/general/orders/list">
+          <Link href="/general/orders">
             <Button size="lg">
               <ShoppingCart className="mr-2 h-4 w-4" /> Ordena aquí
             </Button>
           </Link>
-          <Link href="/login">
+          <Link href="/test">
             <Button variant="ghost" size="lg">
               <Sparkles className="mr-2 h-4 w-4" /> Únete al laboratorio
             </Button>

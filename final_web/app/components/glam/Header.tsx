@@ -10,7 +10,7 @@ export const Header = () => {
       </Link>
       <nav className="flex gap-4 items-center">
         <Link href="/products" className="hover:underline">Productos</Link>
-        <Link href="/login">
+        <Link href="/general/login" className='hover:'>
           <Button variant="outline">Ingresar</Button>
         </Link>
       </nav>
